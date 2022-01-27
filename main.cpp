@@ -2,6 +2,7 @@
 #include <string>
 #include <filesystem>
 #include <thread>
+
 #include <fstream>
 #include <vector>
 using namespace std;
@@ -52,11 +53,10 @@ void lines(vector<string> mac){
 }
 
 int main() {
-    thread pliki(files);
-    thread maci(lista);
-    vector<string> macierz = maci.join();
-    long c = lines(macierz);
-    cout<<c;
-
+    vector<string> macierz = lista();
+    thread Thread1(files);
+    thread Thread2(lines, macierz);
+    Thread2.join();
+    Thread1.join();
     return 0;
 }
