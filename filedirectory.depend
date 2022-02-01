@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1643730329 source:/home/michal/zadanko/bcfsoftware/main.cpp
+	<iostream>
+	<string>
+	<filesystem>
+	<thread>
+	<fstream>
+	<vector>
+	<gtest/gtest.h>
+	<ctime>
+	<chrono>
+
